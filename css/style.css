@@ -1,0 +1,191 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+}
+
+.calendar-base {
+  width: 1000px;
+  height: 800px;
+}
+.calendar-base .header {
+  width: 100%;
+  height: 100px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 2px #d0d0d0;
+}
+.calendar-base .header .header-panel {
+  padding: 55px 50px 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.calendar-base .header .header-panel .header-panel__btn {
+  display: flex;
+  width: 170px;
+  height: 26px;
+  justify-content: space-between;
+}
+.calendar-base .header .header-panel .header-panel__btn a {
+  width: 80px;
+  height: 100%;
+  background-color: #0271c7;
+  color: #fff;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 2px 2px #d0d0d0;
+  text-decoration: none;
+}
+.calendar-base .header .header-panel .header-panel__btn a:hover {
+  cursor: pointer;
+}
+.calendar-base .header .header-panel .header-panel__search {
+  display: flex;
+  width: 220px;
+  height: 26px;
+  justify-content: space-between;
+}
+.calendar-base .header .header-panel .header-panel__search div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.calendar-base .header .header-panel .header-panel__search div a {
+  display: flex;
+  align-items: center;
+}
+.calendar-base .header .header-panel .header-panel__search input {
+  width: 200px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: inset 0 1px 2px #d0d0d0;
+}
+.calendar-base .header .header-panel .header-panel__search input::placeholder {
+  color: #cccccc;
+}
+.calendar-base .calendar-body {
+  width: 100%;
+  height: 700px;
+  padding: 16px 50px;
+}
+.calendar-base .calendar-body .calendar-main .calendar-datetime {
+  width: 100%;
+  height: 16px;
+  display: flex;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.calendar-base .calendar-body .calendar-main .calendar-datetime .calendar-nav {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  box-shadow: inset 0 0 2px #d0d0d0;
+}
+.calendar-base .calendar-body .calendar-main .calendar-datetime .calendar-nav svg {
+  display: block;
+  margin: 4px auto;
+  width: 5px;
+  height: 5px;
+  color: #676767;
+}
+.calendar-base .calendar-body .calendar-main .calendar-datetime .calendar-today {
+  width: 120px;
+  margin: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar-base .calendar-body .calendar-main .calendar-daysWeek {
+  display: flex;
+}
+.calendar-base .calendar-body .calendar-main .calendar-daysWeek .calendar-daysWeek__label {
+  width: 128px;
+  height: 0;
+  padding: 0 7px;
+  color: #999999;
+  position: relative;
+  top: 10px;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days {
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days div:nth-child(1) .calendar-number {
+  position: relative;
+  left: 85px;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days div:nth-child(2) .calendar-number {
+  position: relative;
+  left: 55px;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days div:nth-child(3) .calendar-number {
+  position: relative;
+  left: 41px;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days div:nth-child(4) .calendar-number {
+  position: relative;
+  left: 53px;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days div:nth-child(5) .calendar-number {
+  position: relative;
+  left: 55px;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days div:nth-child(6) .calendar-number {
+  position: relative;
+  left: 53px;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days div:nth-child(7) .calendar-number {
+  position: relative;
+  left: 81px;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days .calendar-today {
+  background-color: #f4f4f4;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days .calendar-today .calendar-number {
+  font-weight: 600;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days__prevMonth, .calendar-base .calendar-body .calendar-main .calendar-days__currMonth, .calendar-base .calendar-body .calendar-main .calendar-days__nextMonth {
+  width: 128px;
+  height: 118px;
+  color: #999999;
+  border-right: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days__prevMonth .calendar-number, .calendar-base .calendar-body .calendar-main .calendar-days__currMonth .calendar-number, .calendar-base .calendar-body .calendar-main .calendar-days__nextMonth .calendar-number {
+  width: 100%;
+  height: 100%;
+  padding: 9px 7px;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days__prevMonth .calendar-event, .calendar-base .calendar-body .calendar-main .calendar-days__currMonth .calendar-event, .calendar-base .calendar-body .calendar-main .calendar-days__nextMonth .calendar-event {
+  background-color: #c2e4fe;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days__prevMonth .calendar-event .calendar-event__title div, .calendar-base .calendar-body .calendar-main .calendar-days__currMonth .calendar-event .calendar-event__title div, .calendar-base .calendar-body .calendar-main .calendar-days__nextMonth .calendar-event .calendar-event__title div {
+  width: 100%;
+}
+.calendar-base .calendar-body .calendar-main .calendar-days__prevMonth .calendar-event .calendar-event__title div span, .calendar-base .calendar-body .calendar-main .calendar-days__currMonth .calendar-event .calendar-event__title div span, .calendar-base .calendar-body .calendar-main .calendar-days__nextMonth .calendar-event .calendar-event__title div span {
+  font-weight: 600;
+}
+.calendar-base .calendar-body .calendar-dayToday {
+  width: 55px;
+  height: 15px;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 2px #d0d0d0;
+  font-size: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
